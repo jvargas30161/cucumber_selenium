@@ -4,12 +4,19 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test {
+    
+    private ChromeDriver driver;
+
 
     @Given("^El usuario se encuentra en la pagina home de imalittletester$")
     public void el_usuario_se_encuentra_en_la_pagina_home_de_imalittletester() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+        System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("https://imalittletester.com/");
+        driver.manage().window().maximize();
 
     }
 
