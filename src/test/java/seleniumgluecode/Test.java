@@ -22,7 +22,7 @@ public class Test {
 
     }
 
-    @When("^Haces clic sobre el boton The litlle tester comics$")
+    @When("^Hace clic sobre el boton The litlle tester comics$")
     public void hace_clic_sobre_el_boton_The_litlle_tester_comics() throws Throwable {
         WebElement titleComicsLocator = driver.findElement(By.id("menu-item-2008"));
         titleComicsLocator.click();
