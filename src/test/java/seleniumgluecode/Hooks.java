@@ -20,7 +20,7 @@ public class Hooks {
     public void setUp(){
         numberofCase ++;
         System.out.println("Se esta ejecutando el escenario nro: " + numberofCase);
-        driverManager = DriverManagerFactory.getManager(DriverType.FIREFOX);
+        driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
         driver = driverManager.getDriver();
         driver.get("https://imalittletester.com/");
         driver.manage().window().maximize();
